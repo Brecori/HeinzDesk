@@ -259,63 +259,63 @@ const enviarFeedbackBtn = document.getElementById('enviar-feedback');
 
 enviarFeedbackBtn.addEventListener('click', async (e) => {
   e.preventDefault();
-  const dataFeedback = document.getElementById('data').value;
-  const pais = document.getElementById('country').value;
-  const positivo = document.getElementById('positivo').checked;
-  const negativo = document.getElementById('negativo').checked;
-  const marcaFeedback = document.getElementById('brand').value;
-  const qtdFeedback = document.getElementById('qtd').value;
-  const produtoFeedback = document.getElementById('product').value;
+  let dataFeedback = document.getElementById('data').value;
+  let pais = document.getElementById('country').value;
+  let positivo = document.getElementById('positivo').checked;
+  let negativo = document.getElementById('negativo').checked;
+  let marcaFeedback = document.getElementById('brand').value;
+  let qtdFeedback = document.getElementById('qtd').value;
+  let produtoFeedback = document.getElementById('product').value;
   let posOrNeg = null;
-  console.log('Clicou no botão!');
-  const selectedValues = dropdown.getValue();
-  const selectedArray = selectedValues.split(';')
-  console.log(dataFeedback)
-  console.log(pais)
-  console.log(posOrNeg);
-  
-  console.log(produtoFeedback);
-  console.log(marcaFeedback);
-  console.log(qtdFeedback);
+  let selectedValues = dropdown.getValue();
+  let selectedArray = selectedValues.split(';')
   if (positivo) {
     posOrNeg = true;
   } else {
     posOrNeg = false;
   }
-  console.log(posOrNeg);
 
   const data = {
-    "date": "2002-12-19",
-    "local": "Japao",
-    "feedback" : true,
-    "productSku" : 1003,
-    "brandId": 3,
-    "qtd_comment": 1001,
-    "goals": [
-      "e483c06d-3bbc-4a81-8b83-d4ba06335d2e",
-  ]
+    "date": dataFeedback,
+    "local": pais,
+    "feedback" : posOrNeg,
+    "productSku" : produtoFeedback,
+    "brandId": marcaFeedback,
+    "qtd_comment": qtdFeedback,
+    "goals": selectedArray
   };
 
 // Enviar o post para a api
 const apiUrl = 'http://localhost:8081/register/data';
 const requestOptions = {
   method: 'POST',
-  mode: 'no-cors',
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   },
   body: JSON.stringify(data)
 }
-console.log(data);  
 fetch(apiUrl, requestOptions)
-.then(response => response.json()) // obter a resposta em formato JSON
-.then(data => console.log(data)) // fazer algo com os dados
-.catch(error =>  {
-  console.error(error)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro na solicitação POST');
+    }
+    dataFeedback = '';
+    pais = '';
+    positivo = false;
+    negativo = false;
+    marcaFeedback = '';
+    qtdFeedback = 0;
+    selectedArray = '';
+    window.location.href = './obrigadoenviarfeedback.html';
+    console.log('AAAAAAAAAAAAAAAAAA');
+    return response.json();
+  })
+  .then(data => {
+    console.log(data + 'AAAAAAAAAAAAA')
   
-}
-  ); // tratar possíveis erros
+  })
+  .catch(error => {
+    console.error(error);
+  })
 
-  // Redireciona para a página desejada
-  // window.location.href = './obrigadoenviarfeedback.html';
-});
+})
