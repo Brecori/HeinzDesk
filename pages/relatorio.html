@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                       </svg>Voltar</span></a></p>
                 </div>
 
-                <iframe id="frame" title="Report Section"  width="80%" height="70%" style="margin-top: 50px;" src="https://app.powerbi.com/view?r=eyJrIjoiMTQ4MWFjNzAtYTFmOC00ZmE2LWI5YjktMDJlNjgxZGQ1MTQ0IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+                <tableau-viz id='tableau-viz' src='https://us-west-2b.online.tableau.com/t/heinzenberg/views/tableauzinho/Painel1' width='1200' height='740' hide-tabs toolbar='bottom' ></tableau-viz>
 
                 <div class="botao-flutuante">
                     <a href="./listacomentarios.html" class="btn-yellow bold">Ver Comentários Diretos</a>

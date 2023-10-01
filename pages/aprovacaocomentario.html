@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
 
+    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+        
 </head>
 
 <body>
@@ -34,7 +38,7 @@
                             <div class="">
                                 <p class="color-yellow title-comentario">Data do Feedback</p>
                                 <div class="comentario-box">
-                                    <p class="color-black">29 / 09 / 2023</p>
+                                    <p class="color-black">30 / 09 / 2023</p>
                                 </div>
                             </div>
                             <div class="regiao">
@@ -48,41 +52,28 @@
                             <div>
                                 <p class="color-yellow title-comentario">Comentário</p>
                                 <div class="comentario-box">
-                                    <p class="color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Facere rerum ratione qui, quis, sequi, nobis eveniet asperiores quisquam vero
-                                        optio nisi maxime explicabo deserunt doloremque repellat id quidem dignissimos
-                                        recusandae velit. Fugiat sed distinctio nostrum iste, culpa voluptatem? Ad
-                                        possimus dignissimos molestiae explicabo aperiam, dolorem tempora ut corrupti
-                                        minus est dolores iste porro. Est pariatur deleniti quas atque, vitae corrupti,
-                                        nostrum non in cum eum, voluptatem laudantium. Inventore illo odio harum dolor
-                                        nisi? Deleniti sequi perspiciatis dolores ullam, dolorem error earum eius harum
-                                        temporibus quo repellat porro rerum quidem quos blanditiis minus officiis illum
-                                        magni odit aliquid obcaecati consequatur laborum?</p>
+                                    <p class="color-black">Embalagem do ketchup perfeita, a abertura é perfeita para sair a quantidade necessária</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row-comentario d-flex justify-between w-50">
-                            <div class="">
-                                <p class="color-yellow title-comentario">Produto</p>
-                                <div class="comentario-box">
-                                    <p class="color-black">Ketchup</p>
-                                </div>
-                            </div>
-                            <div class="regiao">
-                                <p class="color-yellow title-comentario">Marca</p>
-                                <div class="comentario-box">
-                                    <p class="color-black">Heinz</p>
-                                </div>
-                            </div>
+                            
                         </div>
                         <div class="row-comentario">
                             <p class="color-yellow title-comentario">Nível de satisfação com a marca</p>
                             <div class="progress-bar">
                                 <progress style="position: relative;  height: 15px; width: 100%; margin-top: 20px;"
-                                    min="0" step="1" max="100" value="50" class="progress-red"></progress>
-                                <p class="bold color-black">90%</p>
+                                    min="0" step="1" max="100" value="82" class="progress-red"></progress>
+                                <p class="bold color-black">82%</p>
                             </div>
                         </div>
+                        <div class="d-flex row">
+                            <div class="d-flex column form-metas gap5 font-80" id="">
+                                <label for="metas">Metas Associadas</label>
+                                <div id="dropdown2"></div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="d-flex w-45 flex-column gap50">
@@ -142,6 +133,7 @@
         <div class="botao-flutuante-l">
             <a href="./obrigadofeedback.html" class="btn-yellow bold">Aprovar Comentário</a>
         </div>
+        <script src="../js/dropdown.js"></script>
 </body>
 
 </html>
