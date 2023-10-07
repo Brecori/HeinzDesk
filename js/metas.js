@@ -2,9 +2,32 @@ var metas = [
   {
     "group": "Ambiental",
     "color": "green",
+    "text": "Visamos criar embalagens 100% recicláveis, reutilizáveis ou compostáveis até 2025.",
+    "value": "32e80e10-e848-487b-9f8f-5863b6145dd2",
+    "range": 84.0
+  }
+  ,
+  {
+    "group": "Ambiental",
+    "color": "green",
     "text": "Reduzir a intensidade do uso de energia em nossas instalações em 15% até 2025 (por tonelada métrica de produto fabricado).",
     "value": "9f516b7b-6b7d-491b-b790-8430877185b2",
     "range": 33.0
+  },
+  {
+    "group": "Governança",
+    "color": "orange",
+    "text": "Compra de 100% dos tomates sustentáveis para o Heinz Ketchup até 2025.",
+    "value": "7eb57f2c-a286-48d9-bf4c-69b40877e9fd",
+    "range": 50.0
+  }
+  ,
+  {
+    "group": "Social",
+    "color": "red",
+    "text": "Melhorar a saúde e nutrição dos produtos, alcançando 85% de conformidade com as Metas Globais de Nutrição da Kraft Heinz até 2025.",
+    "value": "704f26b5-2031-44ca-8321-4cd12a40750d",
+    "range": 67.7
   },
   {
     "group": "Governança",
@@ -27,13 +50,7 @@ var metas = [
     "value": "c14dc9a3-b5d0-4f37-9c09-68c5e919aa81",
     "range": 100.0
   },
-  {
-    "group": "Social",
-    "color": "red",
-    "text": "Melhorar a saúde e nutrição dos produtos, alcançando 85% de conformidade com as Metas Globais de Nutrição da Kraft Heinz até 2025.",
-    "value": "704f26b5-2031-44ca-8321-4cd12a40750d",
-    "range": 67.7
-  },
+  
   {
     "group": "Social",
     "color": "red",
@@ -88,14 +105,7 @@ var metas = [
   "range": 25.0
 }
 ,
-{
-  "group": "Ambiental",
-  "color": "green",
-  "text": "Visamos criar embalagens 100% recicláveis, reutilizáveis ou compostáveis até 2025.",
-  "value": "32e80e10-e848-487b-9f8f-5863b6145dd2",
-  "range": 84.0
-}
-,
+
 {
   "group": "Ambiental",
   "color": "green",
@@ -128,14 +138,7 @@ var metas = [
   "range": 100.0
 }
 ,
-{
-  "group": "Governança",
-  "color": "orange",
-  "text": "Compra de 100% dos tomates sustentáveis para o Heinz Ketchup até 2025.",
-  "value": "7eb57f2c-a286-48d9-bf4c-69b40877e9fd",
-  "range": 50.0
-}
-,
+
 {
   "group": "Governança",
   "color": "orange",
@@ -196,7 +199,7 @@ metasSociais.forEach(meta => {
   
     const cardLink = document.createElement('a');
     cardLink.classList.add('d-flex','gap10', 'align-center')
-    cardLink.href = '../pages/relatorio.html'; // Adicione o link desejado aqui.
+    cardLink.href = '../pages/relatorioS.html'; 
   
     const cardImage = document.createElement('img');
     cardImage.src = '../assets/images/icon-social.svg';
@@ -248,7 +251,7 @@ metasAmbientais.forEach(meta => {
   
     const cardLink = document.createElement('a');
     cardLink.classList.add('d-flex','gap10', 'align-center')
-    cardLink.href = '../pages/relatorio.html'; // Adicione o link desejado aqui.
+    cardLink.href = '../pages/relatorioE.html'; 
   
     const cardImage = document.createElement('img');
     cardImage.src = '../assets/images/icon-ambiente.svg';
@@ -301,7 +304,7 @@ metasGovernantes.forEach(meta => {
   
     const cardLink = document.createElement('a');
     cardLink.classList.add('d-flex','gap10', 'align-center')
-    cardLink.href = '../pages/relatorio.html'; // Adicione o link desejado aqui.
+    cardLink.href = '../pages/relatorioG.html'; 
   
     const cardImage = document.createElement('img');
     cardImage.src = '../assets/images/icon-gov.svg';
