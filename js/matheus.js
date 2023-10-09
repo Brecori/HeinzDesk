@@ -115,98 +115,10 @@ function getPersonIdFromURL() {
          lgbt.textContent = resultContent;
         
         // --------------------------------------------------------------------------------------------------ACEITAR
-
-        const aceitar = document.getElementById('acceptButton');
-        aceitar.addEventListener('click', async () => {
-          event.preventDefault();
-          const tipoESG = document.getElementById('typeESG1').value;
-          console.log(personId);
-          
-          const positivo = document.querySelector('#positivo');
-          
-          let posOrNeg = false;
-          if (positivo.checked) {
-            posOrNeg = true;
-          }
-          else {
-            posOrNeg = false;
-          }
-          
-          // Defina o URL da API
-          const apiUrl = 'http://localhost:8080/feedback/person/update';
-
-          // Crie um objeto JSON com os dados que você deseja enviar
-          const data = {
-            "feedback" : posOrNeg,
-            "answered": true,
-            "personId":personId,
-            "typeEsg": tipoESG
-        }
-
-          // Configurar as opções da solicitação
-          const requestOptions = {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          };
-
-          // Fazer a solicitação usando a função fetch
-          fetch(apiUrl, requestOptions)
-            .then(response => {
-              if (!response.ok) {
-                throw new Error('Erro na solicitação HTTP');
-              }
-              window.location.href = './obrigadofeedback.html';
-              return response.json();
-            })
-            .then(responseData => {
-              console.log('Resposta da API:', responseData);
-            })
-            .catch(error => {
-              console.error('Erro:', error);
-            });
-
-
-        })
       })
       .catch(error => {
         console.error('Erro:', error);
       });
-
-      //--------------------------------------------------------------------------------------------------REJEITAR
-      
-      const recusar = document.getElementById('recuseButton');
-      recusar.addEventListener('click', async () => {
-        event.preventDefault();
-        // Defina a variável personId
-
-        // Construa o URL da API com a variável personId
-        const apiUrl = `http://localhost:8080/feedback/person/${personId}`;
-
-        // Configurar as opções da solicitação
-        const requestOptions = {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        };
-
-        // Fazer a solicitação DELETE usando a função fetch
-        fetch(apiUrl, requestOptions)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Erro na solicitação HTTP');
-            }
-            window.location.href = './obrigadofeedback.html';
-            console.log('Solicitação DELETE bem-sucedida');
-          })
-          .catch(error => {
-            console.error('Erro:', error);
-          });
-
-      })
   } else {
     console.error('O parâmetro "personId" não foi encontrado na URL.');
   }

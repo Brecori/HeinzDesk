@@ -1,7 +1,7 @@
 // Função para buscar dados da API local e criar os cards
 function fetchAndCreateCards() {
   // URL da API local
-  const baseUrl = 'http://localhost:8081/feedback/person';
+  const baseUrl = 'http://localhost:8080/feedback/person';
   const container = document.getElementById('cardsContainer');
 
   // Fazendo a requisição GET

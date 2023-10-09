@@ -1,7 +1,7 @@
 // Função para buscar dados da API local e criar os cards
 function fetchAndCreateCards() {
   // URL da API local
-  const baseUrl = 'http://localhost:8081/feedback/person';
+  const baseUrl = 'http://localhost:8080/feedback/person';
   const container = document.getElementById('cardsContainer');
 
   // Fazendo a requisição GET
@@ -25,7 +25,7 @@ function fetchAndCreateCards() {
 
         // Criar um link para a página ./aprovacaocomentario.html com personId como parâmetro na URL
         const link = document.createElement('a');
-        link.href = `./aprovacaocomentario.html?personId=${response.personId}`;
+        link.href = `./comentariodiretoS.html?personId=${response.personId}`;
 
         // Criar um parágrafo para o nome (supondo que 'response.name' seja o nome)
         const nomeParagraph = document.createElement('p');
