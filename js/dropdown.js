@@ -177,10 +177,3 @@ var metas = [
   }
   ];
   
-
-  const dropdown2 = jSuites.dropdown(document.getElementById('dropdown2'), {
-    data: metas,
-    autocomplete: true,
-    multiple: true,
-    width: '400px',
-  });

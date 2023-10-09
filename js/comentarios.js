@@ -15,7 +15,10 @@ function fetchAndCreateCards() {
       }
     })
     .then(data => {
-      data.forEach(response => {
+    
+      const dataFiltrado = data.filter(response => response.answered === false);
+
+      dataFiltrado.forEach(response => {
         // Criar um elemento de card
         const card = document.createElement('div');
         card.className = 'card-comentario w-45';
