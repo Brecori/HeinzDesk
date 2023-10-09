@@ -68,10 +68,27 @@
                             </div>
                         </div>
                         <div class="d-flex row">
-                            <div class="d-flex column form-metas gap5 font-80" id="">
-                                <label for="metas">Metas Associadas</label>
-                                <div id="dropdown2"></div>
+                            <div class="d-flex column form gap5" id="typeESG">
+                                <label for="typeESG">Tipo ESG</label>
+                                <select name="typeESG" id="typeESG">
+                                    <option value="0">Selecione um tipo</option>
+                                    <option value="E">Ambiental</option>
+                                    <option value="S">Social</option>
+                                    <option value="G">Governamental</option>
+                                </select>
                             </div>
+                        </div>
+                        <div class="d-flex row">
+                                <div class="d-flex gap100">
+                                    <div class="d-flex align-center gap5 omai">
+                                        <input type="radio" id="positivo" name="opcao" value="true">
+                                        <label for="positivo">Positivo</label>
+                                    </div>
+                                    <div class="d-flex align-center gap5 omai">
+                                        <input type="radio" id="negativo" name="opcao" value="negativo">
+                                        <label for="negativo">Negativo</label>
+                                    </div>
+                                </div>
                         </div>
 
                     </div>
@@ -131,7 +148,10 @@
 
         </div>
         <div class="botao-flutuante-l">
-            <a href="./obrigadofeedback.html" class="btn-yellow bold">Aprovar Comentário</a>
+            <a href="./obrigadofeedback.html" class="btn-yellow bold accept-button">Aprovar Comentário</a>
+        </div>
+        <div class="botao-flutuante-2">
+            <a href="./obrigadofeedback.html" class="btn-yellow bold recuse-button">Recusar Comentário</a>
         </div>
         <script src="../js/dropdown.js"></script>
         <script src="../js/breno.js"></script>

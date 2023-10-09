@@ -199,6 +199,14 @@ span:hover {
     transform: translateY(-4px) translateX(-2px);
     box-shadow: 2px 5px 0 0 #640000;
   }
+  .btn-yellow.recuse-button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 #3a0505;
+  }
+  .btn-yellow.accept-button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 rgb(28, 117, 76);
+  }
 
   .btn-yellow:active {
     transform: translateY(2px) translateX(1px);
@@ -397,9 +405,24 @@ span:hover {
 .botao-flutuante-l{
   position: absolute;
     left: 3%;
+    bottom: 5%;
 }
 
+.botao-flutuante-2{
+  position: absolute;
+    left: 16%;
+    bottom: 5%;
+}
 
+.accept-button {
+  background: #1ABE71;
+  color: white;
+}
+
+.recuse-button {
+  background: #A41B1B;
+  color: white;
+}
 
 .card-comentario p{
   font-size: 2.5rem;

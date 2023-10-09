@@ -10,7 +10,7 @@ function getPersonIdFromURL() {
   
   // Verifique se o "personId" existe
   if (personId) {
-    const apiUrl = `http://localhost:8080/feedback/person/${personId}`;
+    const apiUrl = `http://localhost:8081/feedback/person/${personId}`;
   
     // Fazendo a requisição GET com o personId na URL
     fetch(apiUrl)

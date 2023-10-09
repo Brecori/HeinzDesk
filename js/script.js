@@ -288,7 +288,7 @@ enviarFeedbackBtn.addEventListener('click', async (e) => {
   };
 
 // Enviar o post para a api
-const apiUrl = 'http://localhost:8080/register/data';
+const apiUrl = 'http://localhost:8081/register/data';
 const requestOptions = {
   method: 'POST',
   headers: {
