@@ -44,3 +44,5 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. Você também pode colocar eles em arquivos separados e requeridos-as aqui.
+
+// Breno Tosi
